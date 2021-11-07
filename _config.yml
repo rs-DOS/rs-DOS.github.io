@@ -3,7 +3,7 @@ author:
   name: Rushabh Doshi
   email: rushabhdoshi94@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  This blog is about supply chain analytics and optmization.    
+  This blog is about optimization and supply chain analytics.    
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
