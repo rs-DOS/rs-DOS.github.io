@@ -3,7 +3,7 @@
 Job shop scheduling is problem where the user has to schedule multiple jobs on multiple machines. At a small scale it is easy enough to solve by hand. But when the number of jobs and available machines is relatively large, it is almost impossible to solve by hand. In computer science it is known as an **NP-Complete Problem**. In technical terms for every instance of the job shop scheduling problem with more than 3 available machines there no known exact algorithms that can solve it in polynomial time.<br> 
 
 NP-Completness is a great excuse for any scientist, when faced with a problem too difficult to solve, to prove it is NP-Complete and get of scot free when the algorithm takes a long time to solve the problem. In layman terms there is no guarantee that for many jobs on many machines you will be able to find an optimal schedule quickly.<br>
-![NP-Complete.jpg](attachment:NP-Complete.jpg)
+![NP-Complete.jpg](/assets/NP_Complete_meme_job_shop_tutorial.jpg)
 
 In reality, hardware and software has come a long way since when the JSSP was formulated as mathematical optimization problem. [Bob Bixby](https://en.wikipedia.org/wiki/Robert_E._Bixby) has a nice slide in one of his talks where he showcases the improvement in solver technology. This means that relatively large scheduling instances can be solved to optimality or close to optimality in short time. <br>
 
@@ -41,7 +41,7 @@ We have 4 orders to fulfill and we have 4 machines to process the orders.
 
 ```python
 #Read in the order data from a CSV file
-jobs_df = pd.read_csv(r'C:\Users\11937\OneDrive - Intas Pharmaceuticals Ltd\Scheduling\Order_data_blog.csv')
+jobs_df = pd.read_csv(r'D:\Data Science\Discrete Optimization\Order_data_blog.csv')
 #jobs_df.head()
 
 #Create a tuples of machine_id and processing time
