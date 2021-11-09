@@ -300,4 +300,4 @@ if __name__ == '__main__':
     main()
 ```
 
-![gantt%20chart.png](attachment:gantt%20chart.png)
+![Gantt Chart.png](/assets/Gantt_chart_job_shop_tutorial.png)
