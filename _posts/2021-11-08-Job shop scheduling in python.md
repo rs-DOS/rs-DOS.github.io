@@ -1,5 +1,3 @@
-## Solving the job shop scheduling in python using constraint prograamming
-
 Job shop scheduling is problem where the user has to schedule multiple jobs on multiple machines. At a small scale it is easy enough to solve by hand. But when the number of jobs and available machines is relatively large, it is almost impossible to solve by hand. In computer science it is known as an **NP-Complete Problem**. In technical terms for every instance of the job shop scheduling problem with more than 3 available machines there no known exact algorithms that can solve it in polynomial time.<br> 
 
 NP-Completness is a great excuse for any scientist, when faced with a problem too difficult to solve, to prove it is NP-Complete and get of scot free when the algorithm takes a long time to solve the problem. In layman terms there is no guarantee that for many jobs on many machines you will be able to find an optimal schedule quickly.<br>
