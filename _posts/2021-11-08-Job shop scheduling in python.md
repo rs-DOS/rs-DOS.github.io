@@ -159,10 +159,10 @@ Visualization is a very important step to to understand the output of the model.
 
 ```python
 plan_date = pd.to_datetime('11/08/2021 09:00:00')
-def visualize_schedule(assigned_jobs,all_staffs,plan_date):
+def visualize_schedule(assigned_jobs,all_machines,plan_date):
     final = []
-    for staff in all_staffs:
-        assigned_jobs[staff].sort()
+    for machine in all_machines:
+        assigned_jobs[machine].sort()
         for assigned_task in assigned_jobs[staff]:
             name = 'Order_%i' % assigned_task.job
             temp = dict(Task=staff,Start=plan_date + pd.DateOffset(minutes = assigned_task.start),
@@ -185,9 +185,9 @@ plan_date = pd.to_datetime('11/08/2021 09:00:00')
 
 def visualize_schedule(assigned_jobs,all_staffs,plan_date):
     final = []
-    for staff in all_staffs:
-        assigned_jobs[staff].sort()
-        for assigned_task in assigned_jobs[staff]:
+    for machine in all_machines:
+        assigned_jobs[machine].sort()
+        for assigned_task in assigned_jobs[machine]:
             name = 'Order_%i' % assigned_task.job
             temp = dict(Task=staff,Start=plan_date + pd.DateOffset(minutes = assigned_task.start),
                         Finish= plan_date + pd.DateOffset(minutes = (assigned_task.start + assigned_task.duration)),
