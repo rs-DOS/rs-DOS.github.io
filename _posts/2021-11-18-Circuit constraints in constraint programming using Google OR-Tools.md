@@ -6,12 +6,13 @@ the [travelling salesman problem (TSP)](https://en.wikipedia.org/wiki/Travelling
 <br>
 
 From [Francis and Stuckey](https://people.eng.unimelb.edu.au/pstuckey/circuit/):<br>
->If we consider the graph *G* with a vertex u<sub>i</sub> for each variable v<sub>i</sub> and edges (u<sub>i</sub>, u<sub>j</sub> ) where *j* is in the domain of v<sub>i</sub>, a solution to the circuit constraint is a Hamiltonian cycle of *G*
-<br>
+>If we consider the graph *G* with a vertex u<sub>i</sub> for each variable v<sub>i</sub> and edges (u<sub>i</sub>, u<sub>j</sub> ) where *j* is in the domain of v<sub>i</sub>, a solution to the circuit constraint is a Hamiltonian cycle of *G* <br>
+
 Circuit constraints make sense when modelling routing where the job of an agent is to traverse all the vertices in a graph. In simpler terms, a roomba must start from its station and return to back to it's station after vacuuming the room.
-The start and the end points remain the same. 
+The start and the end points remain the same. <br>
 <img src="/assets/cat_roomba_vrp.gif" width="500" height="350" />
 <br>
+
 This is a very common problem for delivery companies where the truck departs the warehouse full of packages and returns to the warehouse after delivering goods to customers all over the city. The driver doesn'y want to visit the same customer twice (vast of time and fuel) and he must return to the warehouse to load more packages for the next round.
 A circuit constraint does make sense in *routing* problems. <br>
 At the first glance, circuit constraints doen't make sense in job shop scheduling problems where the schedule is directed acyclic graph. 
