@@ -1,4 +1,3 @@
-## Use of circuit constraints 
 Circuit constraints are used in constraint programming to force an *Hamiltonian* circuit on a successor array. They are used commonly in industrial applications such as the [vehicle routing problem (VRP)](https://en.wikipedia.org/wiki/Vehicle_routing_problem) and
 the [travelling salesman problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem). There's a great GIF on [STEM lounge](https://stemlounge.com/animated-algorithms-for-the-traveling-salesman-problem/) for visualizing the TSP.
 
