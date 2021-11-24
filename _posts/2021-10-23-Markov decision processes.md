@@ -16,7 +16,24 @@ about short-term rewards (&gamma; = 0) and long term rewards (&gamma; =1)
 ### State space
 ### Action space
 ### Transition probability matrix
-### Rewards and discount factor 
+### Rewards and discount factor
+
+## MDPs for inventory control
+[Adapated from 6.246 Reinforcement Learning: Foundations and Methods — Lec3 — 1](https://web.mit.edu/6.246/www/notes/L3-notes.pdf)<br>
+A common question in supply chain management is when and by how much to replenish the shelves in a store. Replenishment can be thought of as an stochatic control problem. <br>
+<img src="/assets/warehouse manager.jpg" width="200" height="200" /><br>
+Let's say that you are a warehouse manager looking after just one SKU (stock keeping unit).You review the inventory at the end of each month and decide how much inventory to order.
+There is a cost associated with maintaining some inventory in the warehouse *h(s)*, with ordering inventory *C(a)*. Selling the items earns you an income of *f(q)*. If the demand is greater than the available inventory then the customer leaves your store to never come back i.e there are no backorders. Only constraint that we are considering now is maximum capacity of the warehouse *M*. <br>
+
+**State space** - *s* ∈ *S* = {0, 1, ...., M} which is the number of goods we can store in our warehouse; constrained by maximum capacity of the warehouse <br>
+**Action space** - For a state *s*, *a* ∈ *A(s)* = {0, 1, ..., M − s}. Action space depends on the current state as we cannot order more than the capacity of the warehouse. Basically the only action the warehouse manager can take is choosing how much to order <br>
+**Reward** - *r<sub>t</sub>* = - *C(a<sub>t</sub>)* - *h(s<sub>t</sub> + a<sub>t</sub>)*  + *f([s<sub>t</sub> + a<sub>t</sub> - s<sub>t - 1</sub>]<sup>+</sup>)*  <br>
+  where, *C(a<sub>t</sub>)* is the ordering cost for *a* number of units <br>
+   *h(s<sub>t</sub> + a<sub>t</sub>)* is the holding cost of current inventory + ordered inventory  <br>
+ *f([s<sub>t</sub> + a<sub>t</sub> - s<sub>t - 1</sub>]<sup>+</sup>)* is the income from sales <br>
+
+
+ 
 
 
 
