@@ -13,11 +13,6 @@ An MDP is a 4-tuple *M* :
 Sometimes a discount factor is added to the problem definition to model the variance associated with time horizons. Basically &gamma; models how much we care
 about short-term rewards (&gamma; = 0) and long term rewards (&gamma; =1)
 
-### State space
-### Action space
-### Transition probability matrix
-### Rewards and discount factor
-
 ## MDPs for inventory control
 [Adapated from 6.246 Reinforcement Learning: Foundations and Methods — Lec3 — 1](https://web.mit.edu/6.246/www/notes/L3-notes.pdf)<br>
 A common question in supply chain management is when and by how much to replenish the shelves in a store. Replenishment can be thought of as an stochatic control problem. <br>
