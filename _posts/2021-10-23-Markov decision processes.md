@@ -31,6 +31,8 @@ There is a cost associated with maintaining some inventory in the warehouse *h(s
   where, *C(a<sub>t</sub>)* is the ordering cost for *a* number of units <br>
    *h(s<sub>t</sub> + a<sub>t</sub>)* is the holding cost of current inventory + ordered inventory  <br>
  *f([s<sub>t</sub> + a<sub>t</sub> - s<sub>t - 1</sub>]<sup>+</sup>)* is the income from sales <br>
+ 
+ The goal is to find a policy (π) of re-ordering that achieves a lot of reward over the long run. 
 
 
  
