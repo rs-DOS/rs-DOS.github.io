@@ -28,6 +28,15 @@ There is a cost associated with maintaining some inventory in the warehouse *h(s
  *f([s<sub>t</sub> + a<sub>t</sub> - s<sub>t - 1</sub>]<sup>+</sup>)* is the income from sales <br>
  
  The goal is to find a policy (π) of re-ordering that achieves a lot of reward over the long run. 
+ <br>
+ From [Sutton and Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf):
+> A value function is a function of states (or state action pairs) that estimate how good it is for the agent to be in a given state
+<br>
+Applying this to our inventory problem, it gives us a dollar value on the amount of inventory, *s*, that we are holding. Too little inventory means penalty from loosing customers. Too much inventory means that we incur a high holding cost. It also means that we have tied up our working capital. (You can compare the profit from the sale of the goods to the interest on the capital used to manufacture/procure the goods).
+
+## Solving MDPs
+Dynamic programming is used to solve MDPs. 
+ 
 
 
  
