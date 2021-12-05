@@ -11,6 +11,11 @@ Formally a *Markov process* consists of
 * a countable set of states *S* known as the state space. terminal states are a subset of the state space
 * time-indexed sequence of random states *S<sub>t</sub>* with each transition satisfying the markov property
 <br>
-Usually it is assumed that the transition probability matrix, which defines the probability of *S<sub>t</sub>* moving to *S<sub>t + 1</sub>*, is stationary i.e it does not change with time *t*. Otherwise it would make the job of the modeler significantly more difficult. <br>
-One interesting question introduced here is how do we start the markov process? Is the starting position arbitrary or does it follow some specific probability distribution.  
+Usually it is assumed that the transition probability matrix, which defines the probability of *S<sub>t</sub>* moving to *S<sub>t + 1</sub>* , is stationary i.e it does not change with time *t* . Otherwise it would make the job of the modeler significantly more difficult. <br>
+One interesting question introduced here is how do we start the markov process? Is the starting position arbitrary or does it follow some specific probability distribution? <br>
+
+There is a very good example of modelling inventory management as an MDP. <br>
+Assume that you are the owner of a bicycle shop and need to order bicycle to meet the demand. The demand is random, but it follows a Poisson distribution. There are constraints on the storage space so you can store at most *C* . Any order you place arrives after 36 hours i.e lead time of 36 hours. <br>
+α is the on-hand inventory and β is the pn-order inventory. 
+The state *S<sub>t</sub>* , is defined as the inventory position at 6 pm each day. You close the store at 6 and just before closing review the inventory  and order additional units if required. The policy that you follow is to order *C* - (α + β) if your inventory position is less than the capacity constraint. If the inventory position is greater than the 
 
