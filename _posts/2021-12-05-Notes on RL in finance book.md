@@ -17,5 +17,5 @@ One interesting question introduced here is how do we start the markov process? 
 There is a very good example of modelling inventory management as an MDP. <br>
 Assume that you are the owner of a bicycle shop and need to order bicycle to meet the demand. The demand is random, but it follows a Poisson distribution. There are constraints on the storage space so you can store at most *C* . Any order you place arrives after 36 hours i.e lead time of 36 hours. <br>
 α is the on-hand inventory and β is the pn-order inventory. 
-The state *S<sub>t</sub>* , is defined as the inventory position at 6 pm each day. You close the store at 6 and just before closing review the inventory  and order additional units if required. The policy that you follow is to order *C* - (α + β) if your inventory position is less than the capacity constraint. If the inventory position is greater than the 
+The state *S<sub>t</sub>* , is defined as the inventory position at 6 pm each day. You close the store at 6 and just before closing review the inventory  and order additional units if required. The policy that you follow is to order *C* - (α + β) if your inventory position is less than the capacity constraint. If the inventory position is greater than the store capacity, no order will be placed.
 
