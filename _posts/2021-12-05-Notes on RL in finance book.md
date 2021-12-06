@@ -1,4 +1,4 @@
-#### These are my notes as I read through the [Foundations of reinforcement learning](https://github.com/TikhonJelvis/RL-book) book by [Aswhin Rao](https://www.linkedin.com/in/ashwin2rao/) and [Tikhon Jelvis](https://www.linkedin.com/in/tikhon-jelvis/).
+#### These are my notes as I read through the [Foundations of reinforcement learning](https://github.com/TikhonJelvis/RL-book) book by [Ashwin Rao](https://www.linkedin.com/in/ashwin2rao/) and [Tikhon Jelvis](https://www.linkedin.com/in/tikhon-jelvis/).
 
 ## Chapter 1
 The first chapter basically about coding and designing programs. The book has code samples (written in python) within it with explanations of the concepts relevant to RL.
