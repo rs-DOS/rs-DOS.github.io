@@ -1,11 +1,12 @@
 Circuit constraints are used in constraint programming to force an *Hamiltonian* circuit on a successor array. They are used commonly in industrial applications such as the [vehicle routing problem (VRP)](https://en.wikipedia.org/wiki/Vehicle_routing_problem) and
 the [travelling salesman problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem). There's a great GIF on [STEM lounge](https://stemlounge.com/animated-algorithms-for-the-traveling-salesman-problem/) for visualizing the TSP.
 
-<img src="/assets/tsp_nearest_neighbor.gif" width="1000" height="300" />
+<img src="/assets/tsp_nearest_neighbor.gif" width="1000" height="550" />
 <br>
 
 From [Francis and Stuckey](https://people.eng.unimelb.edu.au/pstuckey/circuit/):<br>
 >If we consider the graph *G* with a vertex u<sub>i</sub> for each variable v<sub>i</sub> and edges (u<sub>i</sub>, u<sub>j</sub> ) where *j* is in the domain of v<sub>i</sub>, a solution to the circuit constraint is a Hamiltonian cycle of *G* <br>
+<br>
 They are used to model changeovers in the JSSP where there must be at least *x* minutes between two tasks being processed on the same machine. <br>
 
 ## Changeovers in the job shop scheduling problem
