@@ -1,7 +1,7 @@
 Circuit constraints are used in constraint programming to force an *Hamiltonian* circuit on a successor array. They are used commonly in industrial applications such as the [vehicle routing problem (VRP)](https://en.wikipedia.org/wiki/Vehicle_routing_problem) and
 the [travelling salesman problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem). There's a great GIF on [STEM lounge](https://stemlounge.com/animated-algorithms-for-the-traveling-salesman-problem/) for visualizing the TSP.
 
-<img src="/assets/tsp_nearest_neighbor.gif" width="1000" height="600" />
+<img src="/assets/tsp_nearest_neighbor.gif" width="1000" height="300" />
 <br>
 
 From [Francis and Stuckey](https://people.eng.unimelb.edu.au/pstuckey/circuit/):<br>
@@ -50,7 +50,11 @@ for i in range(len(job_intervals)):
         #This boolean variable indicates which tasks follows which task
         lit =  model.NewBoolVar('%i follows %i' % (j, i))
         arcs.append([i + 1, j + 1, lit])
-
-
-    
+        
+        #Add condition that if same resources are to be used for the task then block 300 minutes for cleaning
+        if machine_resources[i] != machine_resources[j]:
+          transition_time = 300
+        else:
+          transition_time = 10
+      
 ```
