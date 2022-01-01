@@ -12,10 +12,10 @@ The start and the end points remain the same. <br>
 <img src="/assets/cat_roomba_vrp.gif" width="500" height="350" />
 <br>
 
-This is a very common problem for delivery companies where the truck departs the warehouse full of packages and returns to the warehouse after delivering goods to customers all over the city. The driver doesn'y want to visit the same customer twice (vast of time and fuel) and he must return to the warehouse to load more packages for the next round.
+This is a very common problem for delivery companies where the truck departs the warehouse full of packages and returns to the warehouse after delivering goods to customers all over the city. The driver doesn't want to visit the same customer twice (waste of time and fuel) and he must return to the warehouse to load more packages for the next round.
 A circuit constraint does make sense in *routing* problems. <br>
 At the first glance, circuit constraints doen't make sense in job shop scheduling problems where the schedule is directed acyclic graph. 
-They are used to model changeovers in the JSSP where there must be at least *x* minutes between two jobs being processed on the same machine. <br>
+They are used to model changeovers in the JSSP where there must be at least *x* minutes between two tasks being processed on the same machine. <br>
 
 ## Changeovers in the job shop scheduling problem
 
@@ -23,3 +23,34 @@ Changeovers are scheduled on every machine  This is to allow for cleaning the ma
 
 Changeover constraints are different from precedence constraints in that they have to be applied to machines between jobs whereas precedence constraints are applied within jobs i.e between every task in a single job. 
 Modelling changeover constraints in OR-Tools requires the [AddCircuit](https://developers.google.com/optimization/reference/python/sat/python/cp_model#addcircuit) constraint.
+
+It's always useful to read the documentation for any code that you are using. Looking at the arguments for the AddCircuit constraint, we see that the input is a list of arcs. An arc is a tuple (source_node, destination_node, literal). The arc is selected if the literal is true.  <br>
+
+Looking at an example of [transition times between tasks](https://github.com/google/or-tools/blob/stable/examples/python/jobshop_ft06_distance_sat.py) we see that there are 2 *for* loops for implementing this. The first *for* loop loops over all the tasks assigned to a machine. First a initial arc is created from a dummy node to a task.  
+
+```python
+arcs = []
+for i in range(len(job_intervals)):
+    # Initial arc from the dummy node (0) to a task.
+    #This creates an arc from the dummy node (0)(source node) to the next task 
+    # (destination node) assigned to the machine  
+    start_lit = model.NewBoolVar('%i is first job' % i)
+    arcs.append([0,i +1 , start_lit])
+
+    #Final arc from an arc to the dummy node
+    #This creates an arc from the last task to the dummy node
+    end_lit =  model.NewBoolVar('%i is last job' % i)
+    arcs.append([i + 1 , 0 , end_lit ])
+
+    #We loop again though all the tasks assigned to the machine
+    for j in range(len(job_intervals)):
+        if i == j:
+            continue
+
+        #This boolean variable indicates which tasks follows which task
+        lit =  model.NewBoolVar('%i follows %i' % (j, i))
+        arcs.append([i + 1, j + 1, lit])
+
+
+    
+```
