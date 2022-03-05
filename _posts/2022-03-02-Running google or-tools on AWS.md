@@ -24,3 +24,9 @@ First the .pem key has to be converted to a .ppk key that putty understands. Thi
 Then you can connect to the instance using the ppk key. The username is my-instance-user-name@my-instance-public-dns-name. <br>
 One mistake I made is that I configured the security key so that traffic from a specific IP address could connect to the instance. This can be changed by allowing all IP adress in the 
 scurity group settings. <br>
+
+#### Dr. Debugging or: How I Learned to Stop Worrying and Love the Bugs
+The first error I got when trying to run the script was that the model was invalid. ortools version -  9.2.9972 <br>
+Solve status: MODEL_INVALID <br>
+After some googling I found a issue on the ortools github page where the [model was invalid on windows](https://github.com/google/or-tools/issues/1365). It appears that there is some issue with the format of integers. There is piece of code in my script where I am subtracting two datetime columns in pandas and I suspect where Int32 is being introduced  
+
