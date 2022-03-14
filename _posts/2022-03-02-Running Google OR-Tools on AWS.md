@@ -1,4 +1,4 @@
-#### Running Google OR tools on AWS
+#### Running Google OR Tools on AWS
 I work primarily on scheduling problems which are [NP-Hard](_posts/2021-11-08-Job shop scheduling in python.md). As the size of the input increases the time to find a optimal or even a 
 feasible solution increases. My workstation is remarkably under-powered to test out larger instances of the job shop scheduling problems. So I am goinf test the input data out on 
 AWS free-tier. Hopefully I can convince my bosses that powerful workstations have a good return on investment! <br>
