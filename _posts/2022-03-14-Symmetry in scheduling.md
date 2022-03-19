@@ -2,4 +2,4 @@ As the size of the problem set increases it generally becomes harder and harder 
 
 Let's say we have a task that has to be assigned to machine. The task must start at any time between 0 seconds and finish before 7 seconds. The task takes 2 seconds for the machine to process. The variables here are the start and end time of the task on the machine. The domain for both the variables is between 0 and 7. 
 <br>
-<img src="/assets/simple_task_symmetry_in_scheduling_post.png" width="200" height="200" /><br>
+<img src="/assets/simple_task_symmetry_in_scheduling_post.png" width="400" height="200" /><br>
