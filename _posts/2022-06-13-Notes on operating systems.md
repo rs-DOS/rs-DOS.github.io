@@ -16,4 +16,5 @@ A process usually includes:
 <img src="/assets/process_in_memory.PNG" width="400" height="400" /><br>
 Stack is a <b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut (LIFO) data structure. Frequently used with function calls. <br>
 For x86 CPU's the stack starts out at high memory addresses and grows downwards (as shown by the arrow in the figure above). When a program exceeds all of the space allocated for the stack the program crashes beacuse of stackoverflow (Now I know how stackoverflow got its name). <br>
-Stacks usually allow two operations: push and pop. Push is adding items to the top of the stack and pop is removing items from the top of the stack. Inserting or removing items from the middle of the stack is not permitted. [There's a great animation by Delroy A. Brinkerhoff](https://icarus.cs.weber.edu/~dab/cs1410/textbook/4.Pointers/memory.html)
+Stacks usually allow two operations: push and pop. Push is adding items to the top of the stack and pop is removing items from the top of the stack. Inserting or removing items from the middle of the stack is not permitted. <br>
+[There's a great animation by Delroy A. Brinkerhoff](https://icarus.cs.weber.edu/~dab/cs1410/textbook/4.Pointers/memory.html)
