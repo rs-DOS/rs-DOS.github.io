@@ -6,7 +6,16 @@ A process is an active entity where as a program is an passive entity. A program
 A process usually includes: 
 <li> program code - text section
 <li> program counter  - includes the current activity
-<li> process stack - contains temporary data (such as function parameters, return addresses and local variables)
+<li> process stack - contains temporary data (such as function parameters, return addresses and local variables) </li>
 <li> data section - contains global variables
- <li> heap - memeory dynamicall allocated during process runtime
-   <br>
+<li> heap - memeory dynamicall allocated during process runtime
+<br>
+Stack is a <b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut (LIFO) data structure. Frequently used with function calls. <br>
+ 
+#### Process in memory
+  <br>  
+<img src="/assets/process_in_memory.PNG" width="400" height="400" /><br>
+  
+  Process in memory 
+
+   
