@@ -1,6 +1,6 @@
 I have got some free time on my hand and operating systems sounds like an interesting thing to read up on. I picked [OPERATING SYSTEM CONCEPTS by SILBERSCHATZ, GALVIN and GAGNE](https://www.os-book.com/OS9/) because someone on Twitter recommended it.
 <br>
-A process is the unit of work in a modern time-sharing system. Informally, a process is a program in execution. <br>
+A process is the unit of work in a modern time-sharing system. Informally, a process is a job that the computer must complete. <br>
 A process is an active entity where as a program is an passive entity. A program becomes a process when an executable file is loaded into memory.<br>
 A process usually includes: 
 <li> program code - text section
@@ -18,3 +18,5 @@ For x86 CPU's the stack starts out at high memory addresses and grows downwards 
 Stacks usually allow two operations: push and pop. Push is adding items to the top of the stack and pop is removing items from the top of the stack. Inserting or removing items from the middle of the stack is not permitted. <br>
 [There's a great animation by Delroy A. Brinkerhoff](https://icarus.cs.weber.edu/~dab/cs1410/textbook/4.Pointers/memory.html) <br>
 Heap memory is dynamically allocated by the program. Here there is no restriction that memory can only be accessed at the top. Data can be inserted or removed from anywhere in the heap.
+
+### Interprocess Communication
