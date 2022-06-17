@@ -8,3 +8,10 @@ Information is quantified in the language of the probability: <br> Given a discr
 <p align="center">
 L(X<sub>i</sub>) = log<sub>2</sub>(1/p<sub>i</sub>)
 </p>
+<br>
+The question I had was why was base 2 used for the log. Surprisingly the [Wikipedia](https://en.wikipedia.org/wiki/Units_of_information) page on this is quite useful and accessible to a noob : <br>
+<p align="center">
+the information that can be stored in a system is proportional to the logarithm of N possible states of that system, denoted log<sub>b</sub>N
+</p>
+<br>
+Effectively, 1 bit is the answer to a yes/no question. *Yes* and *No* have equal probabilities 
