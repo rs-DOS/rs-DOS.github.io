@@ -28,7 +28,7 @@ The first error I got when trying to run the script was that the model was inval
 Solve status: MODEL_INVALID <br>
 After some googling I found a issue on the ortools github page where the [model was invalid on windows](https://github.com/google/or-tools/issues/1365). It appears that there is some issue with the format of integers. There is piece of code in my script where I am subtracting two datetime columns in pandas and I suspect where Int32 is being introduced  
 <br>
-The timdelta thing wsa not making any sense so I went back to the Jupyter notebook where everything worked. Funny thing, the two dataframes were created from an Excel sheet. To run the thing on AWS I converted them to different CSV files. This seems to be the root cause of the error. So I checked the actual pd.read code for both the files. In the CSV version I was not parsing dates when I read them into dataframes whereas for the Excel version I was parsing dates.
+The timdelta thing waa not making any sense so I went back to the Jupyter notebook where everything worked. Funny thing, the two dataframes were created from an Excel sheet. To run the thing on AWS I converted them to different CSV files. This seems to be the root cause of the error. So I checked the actual pd.read code for both the files. In the CSV version I was not parsing dates when I read them into dataframes whereas for the Excel version I was parsing dates.
 
 #### Performance
 I checked that the code worked on the t2.micro instance. Once I was satisfied that the code worked as intended, I changed the instance type to t2.xlarge with 8 vCPUs
