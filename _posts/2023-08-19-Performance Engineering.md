@@ -50,6 +50,7 @@ Now the next steps in optimization are not language based changes but changes in
 
 ### Loop the loop
 <img src="/assets/looptheloop.gif" width="500" height="250" /> 
+<br>
 Changing the order of the loops in the C program has a significant impact on the runtime of the code. This is done while preserving the correctness of the code. Now why would changing the order of loops have such a major impact on the runtime? <br>
 To answer this question we must understand how the matrices are represented in memory on the hardware. <br>
 
